@@ -46,13 +46,13 @@ def select_model():
         st.session_state.model_name = "gpt-4o-mini"
         return ChatOpenAI(
             temperature=temperature,
-            model_name=st.session_state.model_name
+            model=st.session_state.model_name
             )
     elif model == "claude-3-5-sonnet-20240620":
         st.session_state.model_name = "claude-3-5-sonnet-20240620"
         return ChatAnthropic(
             temperature=temperature,
-            model_name=st.session_state.model_name
+            model=st.session_state.model_name
             )
 
 def init_chain():
