@@ -116,7 +116,7 @@ def main():
             response = st.write_stream(chain.stream({"user_input": user_input}))
             # invoke()を使って一括でレスポンスを取得
             # response = chain.invoke({"user_input": user_input})
-            st.markdown(response)
+            # st.markdown(response) 
 
         # チャット履歴に追加
         st.session_state.message_history.append(("user", user_input))
