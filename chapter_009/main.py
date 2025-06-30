@@ -51,15 +51,15 @@ CUSTOM_PROMPT = """
 
 def init_page():
     st.set_page_config(
-        page_title="Web Browsing Agent",
+        page_title="Web検索エージェント",
         page_icon="😤"
     )
-    st.header("Web Browsing Agent 😤")
-    st.sidebar.title("Options")
+    st.header("Web検索エージェント 😤") 
+    st.sidebar.title("オプション")
 
 
 def init_messages():
-    clear_button = st.sidebar.button("Clear Conversation", key="clear")
+    clear_button = st.sidebar.button("会話をクリア", key="clear")
 
     if clear_button or "messages" not in st.session_state:
         st.session_state.messages = [
@@ -77,7 +77,7 @@ def select_model():
         "Temperature", min_value=0.0, max_value=2.0, value=0.0, step=0.01)
     
     models = ["gpt-4o-mini", "claude-3-5-sonnet-20240620"]
-    model = st.sidebar.selectbox("Choose a Model", models)
+    model = st.sidebar.selectbox("AIモデルを選択", models)
     if model == "gpt-4o-mini":
         st.session_state.model_name = "gpt-4o-mini"
         return ChatOpenAI(
