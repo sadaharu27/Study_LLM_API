@@ -7,4 +7,13 @@ langchain-community==0.2.19
 langchain-openai==0.1.25
 langchain-core==0.2.43
 langchain-anthropic==0.1.23
+langchain-text-splitters==0.2.4
 httpx==0.28.1
+beautifulsoup4==4.12.3
+requests==2.32.4
+youtube-transcript-api==0.6.2
+pytubefix==8.13.1
+PyMuPDF==1.26.1
+html2text==2025.4.15
+readability-lxml==0.8.4.1
+duckduckgo-search==8.0.4
